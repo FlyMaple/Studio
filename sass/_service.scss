@@ -1,0 +1,399 @@
+#service {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    // padding-top: 350px;
+    // padding-bottom: 350px;
+    background: url(../images/slide-1.jpg) 0 / cover;
+    background-attachment: fixed;
+    height: 990px;
+    @include forPad {
+        padding-top: 300px;
+        padding-bottom: 0;
+        height: 1024px;
+    }
+    @include forip6plus {
+        padding-top: 20px;
+        height: auto;
+    }
+
+    .text-wrp {
+        & > div {
+                // margin-top: -150px;
+        }
+
+        .title {
+            position: relative;
+            top: -30px;
+            font: {
+                size: 52px;
+                weight: 600;
+            }
+            color: #fff;
+        }
+
+        .content {
+            padding-left: 20px;
+            font: {
+                size: 1.6rem;
+                weight: 400;
+            }
+            line-height: 2;
+            color: #f3f3f3;
+            @include text-shadow(-2px -1px 2px black);
+            @include forPad {
+                padding-right: 20px;
+            }
+        }
+    }
+
+    .services-wrp {
+        & > div {
+            @include forPC {
+                margin-top: 300px;
+                margin-right: 50px;
+            }
+            @include for1024PC {
+                margin-top: 150px;
+                margin-right: 50px;
+                // padding: 80px 0 0 0;
+            }
+            @media all and (max-width: 1280px) {
+                margin-top: 250px;
+            }
+            @include forMiniPad {
+                margin-top: 0;
+                margin-right: 0;
+                // padding: 80px 0 0 0;
+            }
+        }
+
+        .rect {
+            position: absolute;
+
+            &.rect1 {
+                width: 80px;
+                top: -210px;
+                left: 0;
+                @include transform(rotate(15deg));
+            }
+            
+            &.rect2 {
+                width: 40px;
+                top: 140px;
+                left: 70px;
+                @include transform(rotate(15deg));
+            }
+            
+            &.rect3 {
+                width: 130px;
+                top: -270px;
+                left: 20px;
+                @include transform(rotate(15deg));
+            }
+            
+            &.rect4 {
+                width: 40px;
+                top: -90px;
+                left: 150px;
+                @include transform(rotate(15deg));
+            }
+            
+            &.rect3 {
+                width: 130px;
+                top: -270px;
+                left: 20px;
+                @include transform(rotate(15deg));
+            }
+            
+            &.rect4 {
+                width: 40px;
+                top: -90px;
+                left: 150px;
+                @include transform(rotate(15deg));
+            }
+            
+            &.rect5 {
+                width: 70px;
+                top: -160px;
+                left: -190px;
+                @include transform(rotate(45deg));
+            }
+            
+            &.rect6 {
+                width: 70px;
+                top: 160px;
+                left: -30px;
+                @include transform(rotate(-15deg));
+            }
+            
+            &.rect7 {
+                width: 70px;
+                top: -110px;
+                left: 50px;
+                @include transform(rotate(-35deg));
+            }
+            
+            &.rect8 {
+                width: 100px;
+                top: 140px;
+                left: 80px;
+                @include transform(rotate(-255deg));
+            }
+        }
+
+        .service {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            padding: 5px;
+            margin-bottom: 120px;
+            border: 2px solid #fff;
+            @include forMiniPad {
+                width: 100%;
+                height: 220px;
+            }
+            @include forip6plus {
+                height: 160px;
+            }
+
+            .info {
+                position: absolute;
+                .no {
+                    font: {
+                        size: 1.3rem;
+                        weight: 600;
+                    }
+                    letter-spacing: .1rem;
+                    color: #fff;
+                }
+
+                .title {
+                    position: relative;
+                    margin-top: 75px;
+                    font: {
+                        size: 2rem;
+                        weight: 600;
+                    }
+                    letter-spacing: .3rem;
+                    color: #fff;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: -10px;
+                        left: 20px;
+                        width: 60px;
+                        height: 2px;
+                        background: #fff;
+                    }
+                }
+
+                .subtitle {
+                    font: {
+                        size: 2rem;
+                        weight: 600;
+                    }
+                    letter-spacing: .3rem;
+                    color: #fff;
+                    @include forip6plus {
+                        font: {
+                            size: 1.5rem;
+                        }
+                    }
+                }
+            }
+
+            .line {
+                width: 60px;
+                height: 90px;
+                border: 2px solid #fff;
+                @include for1024PC {
+                    display: none;
+                }
+            }
+
+            .action {
+                position: relative;
+                width: 60px;
+                height: 60px;
+                border: 2px solid #fff;
+                z-index: 1001;
+                @include transition(all .1s linear);
+                &:hover {
+                    background: rgb(255, 255, 255);
+                    
+                    a {
+                        i {
+                            color: #000;
+                        }
+                    }
+                }
+
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    padding-top: 12px;
+                    text-align: center;
+                    @include transition(all .3s linear);
+
+                    i {
+                        font: {
+                            size: 32px;
+                        }
+                        color: #fff;
+                        @include transition(all .3s linear);
+                    }
+                }
+            }
+
+            &.service1 {
+                margin-top: -50px;
+                margin-right: -50px;
+                @include forPad {
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: -150px;
+                    margin-bottom: 40px;
+                }
+                @include forMiniPad {
+                    margin-top: 0;
+                }
+                @include forip6plus {
+                    margin-bottom: 20px;
+                }
+                .line {
+                    margin-left: 152px;
+                    margin-top: -40px;
+                    border-width: 0 1px 1px 0;
+                }
+
+                .action {
+                    margin-left: 180px;
+                    margin-top: -150px;
+                    @include for1024PC {
+                        margin-left: 85px;
+                        margin-top: 0px;
+                    }
+                    @include forMiniPad {
+                        position: absolute;
+                        margin: 0;
+                        right: 5px;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &.service2 {
+                @include forPad {
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 90px;
+                }
+                @include forMiniPad {
+                    margin-top: 0;
+                }
+                @include forip6plus {
+                    margin-bottom: 20px;
+                }
+                .line {
+                    margin-left: 153px;
+                    margin-top: 130px;
+                    border-width: 1px 1px 1px 0;
+                }
+
+                .action {
+                    margin-left: 95px;
+                    margin-top: -30px;
+                    @include for1024PC {
+                        margin-left: 85px;
+                        margin-top: 0px;
+                    }
+                    @include forMiniPad {
+                        position: absolute;
+                        margin: 0;
+                        right: 5px;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &.service3 {
+                margin-top: -50px;
+                margin-left: -100px;
+                @include forPad {
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 40px;
+                }
+                @include forMiniPad {
+                    margin-top: 0;
+                }
+                @include forip6plus {
+                    margin-bottom: 20px;
+                }
+                .line {
+                    width: 120px;
+                    height: 55px;
+                    margin-left: 96px;
+                    margin-top: -60px;
+                    border-width: 1px 0px 0 1px;
+                }
+
+                .action {
+                    margin-left: 215px;
+                    margin-top: -80px;
+                    @include for1024PC {
+                        margin-left: 85px;
+                        margin-top: 0px;
+                    }
+                    @include forMiniPad {
+                        position: absolute;
+                        margin: 0;
+                        right: 5px;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &.service4 {
+                margin-left: -100px;
+                @include forPad {
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 80px;
+                }
+                @include forMiniPad {
+                    margin-top: 0;
+                }
+                @include forip6plus {
+                    margin-bottom: 20px;
+                }
+                .line {
+                    margin-left: 153px;
+                    border-width: 1px 0 0 0;
+                    margin-top: 75px;
+                }
+
+                .action {
+                    margin-left: 212px;
+                    margin-top: -120px;
+                    @include for1024PC {
+                        margin-left: 85px;
+                        margin-top: 0px;
+                    }
+                    @include forMiniPad {
+                        position: absolute;
+                        margin: 0;
+                        right: 5px;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

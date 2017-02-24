@@ -1,0 +1,54 @@
+@import 'compass/css3';
+
+@import 'rwd';
+
+@import 'footer';
+
+@import 'aside';
+@import 'banner';
+@import 'intro';
+@import 'service';
+@import 'gallery';
+@import 'contact';
+
+* {
+    font: {
+        family: 'Source Sans Pro', '微軟正黑體'
+    }
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+#main {
+    padding-left: 56px;
+    @include forip6plus {
+        padding-left: 0;
+    }
+
+    .container {
+        // height: 100%;
+        @include for1024PC {
+            width: 920px;
+        }
+
+        @include forPad {
+            width: 100%;
+        }
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.zIndex1000 {
+    z-index: 1000;
+}
+
+.mgnbtm10 {
+    margin-bottom: 10px;
+}

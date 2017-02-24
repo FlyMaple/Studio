@@ -1,0 +1,28 @@
+#banner {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    height: 990px;
+    // padding-top: 300px;
+    // padding-bottom: 300px;
+    background: url(../images/banner.jpg) 0 / cover;
+    background-attachment: fixed;
+
+    @include for1024PC {
+        background-position: 10% 0;
+    }
+
+    @include forPad {
+        height: 1024px;
+    }
+
+    .banner-main {
+        text-align: center;
+
+        .logo {
+            & > img {
+                
+            }
+        }
+    }
+}
